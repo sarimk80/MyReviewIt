@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+  <head th:replace="Head/head::Head"/>
+
+
+
+  <body>
+
+   <div th:replace="nab_bar/Navigation::nav"/>
+
+   <!--Landing Image-->
+   <div>
+       <img th:src="@{/Style/Images/landing.png}" class="img-fluid" alt="Landing Page">
+
+   </div>
+
+   <!--Resturants Reviews-->
+
+    <div class="container">
+
+      <div class="starter-template">
+          <th:block th:each="HomeItems : ${Items}">
+
+              <h1 th:text="${HomeItems.name}" class="Script">Bootstrap starter template</h1>
+              <img th:src="@{${HomeItems.images}}"
+                   class="img-fluid" alt="Landing Page" height="850"/>
+
+              <p class="text-justify lead" th:text="${HomeItems.description}">Use this document as a way to quickly start any new project.<br/>
+                  All you get is this text and a mostly barebones HTML document.</p>
+
+          </th:block>
+          <br/>
+
+      </div>
+
+
+        <div class="starter-template">
+
+            <h1 class="Script">Peacock</h1>
+            <img th:src="@{/Style/Images/android.png}" class="img-fluid" alt="Android Application"/>
+            <h2 class=" lead">Find Restaurants , Cafe , Hotels near you</h2>
+            <br/>
+            <a type="submit" class="btn btn-primary" th:href="@{https://play.google.com/store/apps/details?id=mk.findfood}">Play Store</a>
+
+
+        </div>
+
+
+
+    </div><!-- /.container -->
+
+
+   <div th:replace="Head/head::Scripts"/>
+  </body>
+</html>

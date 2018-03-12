@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="Head/head::Head"/>
+
+<body>
+
+<div th:replace="nab_bar/Navigation::nav"/>
+
+<div>
+    <img th:src="@{/Style/Images/lahore.png}" class="img-fluid" alt="Islamabad">
+
+</div>
+
+<div class="container">
+
+    <div class="starter-template">
+        <th:block th:each="LahoreItems : ${Lahore}">
+
+            <h1 th:text="${LahoreItems.name}" class="Script">Bootstrap starter template</h1>
+            <img th:src="@{${LahoreItems.images}}"
+                 class="img-fluid" alt="Landing Page" height="850">
+            <p class="text-justify lead" th:text="${LahoreItems.description}">Use this document as a way to quickly start any new
+                project.<br/>
+                All you get is this text and a mostly barebones HTML document.</p>
+
+        </th:block>
+
+    </div>
+
+    <div th:replace="Head/head::Scripts"/>
+
+</body>
+</html>

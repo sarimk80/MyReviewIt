@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="nav">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <a class="navbar-brand Script" th:href="@{/}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+            <!--Nav Items for different pages-->
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link Script" th:href="@{/Islamabad/}">Islamabad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link Script" th:href="@{/Karachi/}">Karachi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link Script" th:href="@{/Lahore/}">Lahore</a>
+                </li>
+
+            </ul>
+            <!--Social Media Nav Items-->
+            <ul class="navbar-nav float-right">
+
+                <li class="nav-item">
+                    <a class="fa fa-facebook-square nav-link" th:href="@{https://www.facebook.com/Review-It-2305482646344734/}"></a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="fa fa-twitter-square nav-link" th:href="@{https://twitter.com/myreviewIt}"></a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+</div>
+</html>
